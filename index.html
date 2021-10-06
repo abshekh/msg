@@ -26,10 +26,12 @@
       heading.innerHTML = 'Please click the button to listen to it again!!';
     }
 
-    const heading = document.getElementById("heading");
-    const btn = document.getElementById("msg-btn");
+    document.addEventListener("DOMContentLoaded", () => {
+      const heading = document.getElementById("heading");
+      const btn = document.getElementById("msg-btn");
+      btn.addEventListener('click', handleClick);
+    });
 
-    btn.addEventListener(onclick, handleClick);
 
   </script>
 </body>
