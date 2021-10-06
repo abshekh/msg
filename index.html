@@ -10,7 +10,9 @@
 
 <body>
 
-  <h1>To listen to it again, please reload the page!</h1>
+  <h1 id="heading">Please click the button below!!</h1>
+
+  <button id="msg-btn">Click to reveal the message!</button>
 
   <script>
     const speak = (msg) => {
@@ -19,7 +21,16 @@
       speechSynthesis.speak(sp);
     }
 
-    speak("fuck you");
+    const handleClick = (heading) => {
+      speak("fuck you");
+      heading.innerHTML = 'Please click the button to listen to it again!!';
+    }
+
+    const heading = document.getElementById("heading");
+    const btn = document.getElementById("msg-btn");
+
+    btn.addEventListener(onclick, handleClick);
+
   </script>
 </body>
 
