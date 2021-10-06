@@ -29,7 +29,7 @@
     document.addEventListener("DOMContentLoaded", () => {
       const heading = document.getElementById("heading");
       const btn = document.getElementById("msg-btn");
-      btn.addEventListener('click', handleClick);
+      btn.addEventListener('click', (heading) => handleClick(heading));
     });
 
 
